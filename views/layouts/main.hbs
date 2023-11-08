@@ -1,37 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Page</title>
-  <!-- Connect CSS -->
+    <title>{{pageTitle}}</title>
+    <!-- Add your CSS and other head elements here -->
 </head>
-
 <body>
-  <header>
-    <h1>Welcome to My Technical Blog</h1>
-  </header>
-  <main>
-    <aside>
-      <h2>Hope you Enjoy and Learn!</h2>
-    </aside>
-    <div>
-      {{{body}}}
-    </div>
-  </main>
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/js/login.js">Login</a>
-    {{/if}}
-  </nav>
-  
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+    <header>
+        <h1>{{siteTitle}}</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{{body}}} 
+    </main>
+    <footer>
+        &copy; {{currentYear}} {{siteTitle}}
+    </footer>
 
+</body>
 </html>
